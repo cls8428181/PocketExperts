@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "ExpertViewController.h"
+#import "DiscoverTableViewController.h"
+#import "SegmentViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +20,25 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    //创建Tabbar
+    UITabBarController *TBC = [[UITabBarController alloc] init];
+    
+    ExpertViewController *expertVC = [[ExpertViewController alloc] initWithNibName:@"ExpertViewController" bundle:nil];
+    
+    UINavigationController *NC = [[UINavigationController alloc] initWithRootViewController:expertVC];
+    
+    DiscoverTableViewController *discoverTVC = [[DiscoverTableViewController alloc] initWithNibName:@"DiscoverTableViewController" bundle:nil];
+    
+    UINavigationController *TNC = [[UINavigationController alloc] initWithRootViewController:discoverTVC];
+    
+    TBC.viewControllers = @[NC,TNC];
+    
+    self.window.rootViewController = TBC;
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

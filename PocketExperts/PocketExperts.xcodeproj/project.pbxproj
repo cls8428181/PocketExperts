@@ -62,6 +62,12 @@
 		C7836FB71B2045A200BBA578 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C7836FAB1B2045A200BBA578 /* UIView+MJExtension.m */; };
 		C7836FBB1B2045A700BBA578 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C7836FBA1B2045A700BBA578 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C7836FBD1B20471E00BBA578 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C7836FBC1B20471E00BBA578 /* libz.dylib */; };
+		C7836FC11B2053F400BBA578 /* ExpertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7836FBF1B2053F400BBA578 /* ExpertViewController.m */; };
+		C7836FC71B20561A00BBA578 /* DiscoverTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7836FC61B20561A00BBA578 /* DiscoverTableViewController.m */; };
+		C7836FCB1B20591C00BBA578 /* DiscoverTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7836FCA1B20591C00BBA578 /* DiscoverTableViewController.xib */; };
+		C7836FCD1B20593800BBA578 /* ExpertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7836FCC1B20593800BBA578 /* ExpertViewController.xib */; };
+		C7836FD11B205C1E00BBA578 /* SegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7836FCF1B205C1E00BBA578 /* SegmentViewController.m */; };
+		C7836FD21B205C1E00BBA578 /* SegmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7836FD01B205C1E00BBA578 /* SegmentViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -186,6 +192,15 @@
 		C7836FB91B2045A700BBA578 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		C7836FBA1B2045A700BBA578 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		C7836FBC1B20471E00BBA578 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		C7836FBE1B2053F400BBA578 /* ExpertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpertViewController.h; sourceTree = "<group>"; };
+		C7836FBF1B2053F400BBA578 /* ExpertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpertViewController.m; sourceTree = "<group>"; };
+		C7836FC51B20561A00BBA578 /* DiscoverTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverTableViewController.h; sourceTree = "<group>"; };
+		C7836FC61B20561A00BBA578 /* DiscoverTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverTableViewController.m; sourceTree = "<group>"; };
+		C7836FCA1B20591C00BBA578 /* DiscoverTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscoverTableViewController.xib; sourceTree = "<group>"; };
+		C7836FCC1B20593800BBA578 /* ExpertViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpertViewController.xib; sourceTree = "<group>"; };
+		C7836FCE1B205C1E00BBA578 /* SegmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentViewController.h; sourceTree = "<group>"; };
+		C7836FCF1B205C1E00BBA578 /* SegmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentViewController.m; sourceTree = "<group>"; };
+		C7836FD01B205C1E00BBA578 /* SegmentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SegmentViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,6 +310,9 @@
 				C712C7A71B1FF8ED004D11F5 /* Main.storyboard */,
 				C712C7D71B2003DB004D11F5 /* ViewController.h */,
 				C712C7D81B2003DB004D11F5 /* ViewController.m */,
+				C7836FCE1B205C1E00BBA578 /* SegmentViewController.h */,
+				C7836FCF1B205C1E00BBA578 /* SegmentViewController.m */,
+				C7836FD01B205C1E00BBA578 /* SegmentViewController.xib */,
 				C712C7C91B200351004D11F5 /* Discover(发现) */,
 				C712C7CD1B200351004D11F5 /* Home(首页) */,
 			);
@@ -314,6 +332,9 @@
 		C712C7CA1B200351004D11F5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C7836FC51B20561A00BBA578 /* DiscoverTableViewController.h */,
+				C7836FC61B20561A00BBA578 /* DiscoverTableViewController.m */,
+				C7836FCA1B20591C00BBA578 /* DiscoverTableViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -345,6 +366,9 @@
 		C712C7CE1B200351004D11F5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C7836FBE1B2053F400BBA578 /* ExpertViewController.h */,
+				C7836FBF1B2053F400BBA578 /* ExpertViewController.m */,
+				C7836FCC1B20593800BBA578 /* ExpertViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -613,6 +637,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C712C7A91B1FF8ED004D11F5 /* Main.storyboard in Resources */,
+				C7836FCB1B20591C00BBA578 /* DiscoverTableViewController.xib in Resources */,
+				C7836FCD1B20593800BBA578 /* ExpertViewController.xib in Resources */,
+				C7836FD21B205C1E00BBA578 /* SegmentViewController.xib in Resources */,
 				C712C7AE1B1FF8ED004D11F5 /* LaunchScreen.xib in Resources */,
 				C7836FAC1B2045A200BBA578 /* MJRefresh.bundle in Resources */,
 				C712C7AB1B1FF8ED004D11F5 /* Images.xcassets in Resources */,
@@ -637,10 +664,12 @@
 				C7836F461B20459200BBA578 /* Reachability.m in Sources */,
 				C7836F751B20459700BBA578 /* UIImage+WebP.m in Sources */,
 				C7836F901B20459C00BBA578 /* NSObject+MJKeyValue.m in Sources */,
+				C7836FD11B205C1E00BBA578 /* SegmentViewController.m in Sources */,
 				C7836F3A1B20458C00BBA578 /* AFHTTPRequestOperation.m in Sources */,
 				C7836F8D1B20459C00BBA578 /* MJProperty.m in Sources */,
 				C7836F921B20459C00BBA578 /* NSString+MJExtension.m in Sources */,
 				C7836FB71B2045A200BBA578 /* UIView+MJExtension.m in Sources */,
+				C7836FC11B2053F400BBA578 /* ExpertViewController.m in Sources */,
 				C712C7D91B2003DB004D11F5 /* ViewController.m in Sources */,
 				C7836F8B1B20459C00BBA578 /* MJConst.m in Sources */,
 				C7836FAF1B2045A200BBA578 /* MJRefreshFooter.m in Sources */,
@@ -650,6 +679,7 @@
 				C7836F411B20458C00BBA578 /* AFURLResponseSerialization.m in Sources */,
 				C7836F6F1B20459700BBA578 /* SDWebImageDownloaderOperation.m in Sources */,
 				C7836F3F1B20458C00BBA578 /* AFURLConnectionOperation.m in Sources */,
+				C7836FC71B20561A00BBA578 /* DiscoverTableViewController.m in Sources */,
 				C7836FB41B2045A200BBA578 /* MJRefreshLegendHeader.m in Sources */,
 				C7836F6B1B20459700BBA578 /* SDImageCache.m in Sources */,
 				C7836F3E1B20458C00BBA578 /* AFSecurityPolicy.m in Sources */,
