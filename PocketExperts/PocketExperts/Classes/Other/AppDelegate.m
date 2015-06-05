@@ -7,9 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ExpertViewController.h"
-#import "DiscoverTableViewController.h"
-#import "SegmentViewController.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -22,23 +20,30 @@
     // Override point for customization after application launch.
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//
+//    //创建Tabbar
+//    UITabBarController *TBC = [[UITabBarController alloc] init];
+//    
+//    ExpertViewController *expertVC = [[ExpertViewController alloc] initWithNibName:@"ExpertViewController" bundle:nil];
+//    
+//    UINavigationController *NC = [[UINavigationController alloc] initWithRootViewController:expertVC];
+//    
+//    DiscoverTableViewController *discoverTVC = [[DiscoverTableViewController alloc] initWithNibName:@"DiscoverTableViewController" bundle:nil];
+//    
+//    UINavigationController *TNC = [[UINavigationController alloc] initWithRootViewController:discoverTVC];
+//    
+//    TBC.viewControllers = @[NC,TNC];
     
-    //创建Tabbar
-    UITabBarController *TBC = [[UITabBarController alloc] init];
+    ViewController *VC = [[ViewController alloc] init];
     
-    ExpertViewController *expertVC = [[ExpertViewController alloc] initWithNibName:@"ExpertViewController" bundle:nil];
-    
-    UINavigationController *NC = [[UINavigationController alloc] initWithRootViewController:expertVC];
-    
-    DiscoverTableViewController *discoverTVC = [[DiscoverTableViewController alloc] initWithNibName:@"DiscoverTableViewController" bundle:nil];
-    
-    UINavigationController *TNC = [[UINavigationController alloc] initWithRootViewController:discoverTVC];
-    
-    TBC.viewControllers = @[NC,TNC];
-    
-    self.window.rootViewController = TBC;
-    
+    UINavigationController *NC = [[UINavigationController alloc] initWithRootViewController:VC];
+
+    self.window.rootViewController = NC;
+
     [self.window makeKeyAndVisible];
+    
+    
+    
     return YES;
 }
 
