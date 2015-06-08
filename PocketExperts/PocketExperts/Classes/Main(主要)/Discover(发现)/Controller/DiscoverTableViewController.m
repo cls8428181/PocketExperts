@@ -28,6 +28,8 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.tableView.showsVerticalScrollIndicator = NO;
+    
     [self initWithImageAndPageControl];
 
 }
@@ -35,6 +37,9 @@
 - (void)initWithImageAndPageControl
 {
     self.scrollView.contentSize = CGSizeMake(Width*10, 0);
+    
+    self.scrollView.showsHorizontalScrollIndicator = NO;
+    
     for (int i = 0; i < 10; i++) {
         UIImageView * picImage = [[UIImageView alloc] initWithFrame:CGRectMake(Width*i, 0, Width, 200)];
         picImage.tag = 100+i;

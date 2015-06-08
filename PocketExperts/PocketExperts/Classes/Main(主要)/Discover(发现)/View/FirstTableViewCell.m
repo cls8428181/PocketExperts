@@ -20,6 +20,8 @@
     [self.contentView addSubview:_expert3];
     self.expert4 = [[ExpertPicAndName alloc] initWithFrame:CGRectMake(265, 75, 60, 70)];
     [self.contentView addSubview:_expert4];
+    
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
 
 }
 
