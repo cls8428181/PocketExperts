@@ -66,6 +66,13 @@
 		C7836FC71B20561A00BBA578 /* DiscoverTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7836FC61B20561A00BBA578 /* DiscoverTableViewController.m */; };
 		C7836FCB1B20591C00BBA578 /* DiscoverTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7836FCA1B20591C00BBA578 /* DiscoverTableViewController.xib */; };
 		C7836FCD1B20593800BBA578 /* ExpertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7836FCC1B20593800BBA578 /* ExpertViewController.xib */; };
+		C79540511B2531BF00BF9817 /* ListingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C79540501B2531BF00BF9817 /* ListingViewController.m */; };
+		C795405D1B2531CC00BF9817 /* ExpertPicAndName.m in Sources */ = {isa = PBXBuildFile; fileRef = C79540531B2531CC00BF9817 /* ExpertPicAndName.m */; };
+		C795405E1B2531CC00BF9817 /* FirstTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C79540551B2531CC00BF9817 /* FirstTableViewCell.m */; };
+		C795405F1B2531CC00BF9817 /* FirstTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C79540561B2531CC00BF9817 /* FirstTableViewCell.xib */; };
+		C79540601B2531CC00BF9817 /* ListingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C79540581B2531CC00BF9817 /* ListingCell.m */; };
+		C79540611B2531CC00BF9817 /* ListingHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = C795405A1B2531CC00BF9817 /* ListingHeadView.m */; };
+		C79540621B2531CC00BF9817 /* ProfessorView.m in Sources */ = {isa = PBXBuildFile; fileRef = C795405C1B2531CC00BF9817 /* ProfessorView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -196,6 +203,19 @@
 		C7836FC61B20561A00BBA578 /* DiscoverTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverTableViewController.m; sourceTree = "<group>"; };
 		C7836FCA1B20591C00BBA578 /* DiscoverTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscoverTableViewController.xib; sourceTree = "<group>"; };
 		C7836FCC1B20593800BBA578 /* ExpertViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpertViewController.xib; sourceTree = "<group>"; };
+		C795404F1B2531BF00BF9817 /* ListingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingViewController.h; sourceTree = "<group>"; };
+		C79540501B2531BF00BF9817 /* ListingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingViewController.m; sourceTree = "<group>"; };
+		C79540521B2531CC00BF9817 /* ExpertPicAndName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpertPicAndName.h; sourceTree = "<group>"; };
+		C79540531B2531CC00BF9817 /* ExpertPicAndName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpertPicAndName.m; sourceTree = "<group>"; };
+		C79540541B2531CC00BF9817 /* FirstTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstTableViewCell.h; sourceTree = "<group>"; };
+		C79540551B2531CC00BF9817 /* FirstTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstTableViewCell.m; sourceTree = "<group>"; };
+		C79540561B2531CC00BF9817 /* FirstTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstTableViewCell.xib; sourceTree = "<group>"; };
+		C79540571B2531CC00BF9817 /* ListingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingCell.h; sourceTree = "<group>"; };
+		C79540581B2531CC00BF9817 /* ListingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingCell.m; sourceTree = "<group>"; };
+		C79540591B2531CC00BF9817 /* ListingHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingHeadView.h; sourceTree = "<group>"; };
+		C795405A1B2531CC00BF9817 /* ListingHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingHeadView.m; sourceTree = "<group>"; };
+		C795405B1B2531CC00BF9817 /* ProfessorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfessorView.h; sourceTree = "<group>"; };
+		C795405C1B2531CC00BF9817 /* ProfessorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfessorView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -324,6 +344,8 @@
 		C712C7CA1B200351004D11F5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C795404F1B2531BF00BF9817 /* ListingViewController.h */,
+				C79540501B2531BF00BF9817 /* ListingViewController.m */,
 				C7836FC51B20561A00BBA578 /* DiscoverTableViewController.h */,
 				C7836FC61B20561A00BBA578 /* DiscoverTableViewController.m */,
 				C7836FCA1B20591C00BBA578 /* DiscoverTableViewController.xib */,
@@ -341,6 +363,17 @@
 		C712C7CC1B200351004D11F5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C79540521B2531CC00BF9817 /* ExpertPicAndName.h */,
+				C79540531B2531CC00BF9817 /* ExpertPicAndName.m */,
+				C79540541B2531CC00BF9817 /* FirstTableViewCell.h */,
+				C79540551B2531CC00BF9817 /* FirstTableViewCell.m */,
+				C79540561B2531CC00BF9817 /* FirstTableViewCell.xib */,
+				C79540571B2531CC00BF9817 /* ListingCell.h */,
+				C79540581B2531CC00BF9817 /* ListingCell.m */,
+				C79540591B2531CC00BF9817 /* ListingHeadView.h */,
+				C795405A1B2531CC00BF9817 /* ListingHeadView.m */,
+				C795405B1B2531CC00BF9817 /* ProfessorView.h */,
+				C795405C1B2531CC00BF9817 /* ProfessorView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -629,6 +662,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C712C7A91B1FF8ED004D11F5 /* Main.storyboard in Resources */,
+				C795405F1B2531CC00BF9817 /* FirstTableViewCell.xib in Resources */,
 				C7836FCB1B20591C00BBA578 /* DiscoverTableViewController.xib in Resources */,
 				C7836FCD1B20593800BBA578 /* ExpertViewController.xib in Resources */,
 				C712C7AE1B1FF8ED004D11F5 /* LaunchScreen.xib in Resources */,
@@ -656,9 +690,11 @@
 				C7836F751B20459700BBA578 /* UIImage+WebP.m in Sources */,
 				C7836F901B20459C00BBA578 /* NSObject+MJKeyValue.m in Sources */,
 				C7836F3A1B20458C00BBA578 /* AFHTTPRequestOperation.m in Sources */,
+				C79540601B2531CC00BF9817 /* ListingCell.m in Sources */,
 				C7836F8D1B20459C00BBA578 /* MJProperty.m in Sources */,
 				C7836F921B20459C00BBA578 /* NSString+MJExtension.m in Sources */,
 				C7836FB71B2045A200BBA578 /* UIView+MJExtension.m in Sources */,
+				C795405E1B2531CC00BF9817 /* FirstTableViewCell.m in Sources */,
 				C7836FC11B2053F400BBA578 /* ExpertViewController.m in Sources */,
 				C712C7D91B2003DB004D11F5 /* ViewController.m in Sources */,
 				C7836F8B1B20459C00BBA578 /* MJConst.m in Sources */,
@@ -692,13 +728,17 @@
 				C7836F771B20459700BBA578 /* UIImageView+WebCache.m in Sources */,
 				C7836F761B20459700BBA578 /* UIImageView+HighlightedWebCache.m in Sources */,
 				C7836F691B20459700BBA578 /* MKAnnotationView+WebCache.m in Sources */,
+				C79540611B2531CC00BF9817 /* ListingHeadView.m in Sources */,
 				C7836F731B20459700BBA578 /* UIImage+GIF.m in Sources */,
 				C712C7A01B1FF8ED004D11F5 /* main.m in Sources */,
 				C7836F711B20459700BBA578 /* SDWebImagePrefetcher.m in Sources */,
 				C7836FB61B2045A200BBA578 /* UIScrollView+MJRefresh.m in Sources */,
 				C7836F721B20459700BBA578 /* UIButton+WebCache.m in Sources */,
 				C7836FB21B2045A200BBA578 /* MJRefreshHeader.m in Sources */,
+				C79540511B2531BF00BF9817 /* ListingViewController.m in Sources */,
 				C7836F741B20459700BBA578 /* UIImage+MultiFormat.m in Sources */,
+				C79540621B2531CC00BF9817 /* ProfessorView.m in Sources */,
+				C795405D1B2531CC00BF9817 /* ExpertPicAndName.m in Sources */,
 				C7836F6D1B20459700BBA578 /* SDWebImageDecoder.m in Sources */,
 				C7836F781B20459700BBA578 /* UIView+WebCacheOperation.m in Sources */,
 				C712C7D61B200391004D11F5 /* AppDelegate.m in Sources */,

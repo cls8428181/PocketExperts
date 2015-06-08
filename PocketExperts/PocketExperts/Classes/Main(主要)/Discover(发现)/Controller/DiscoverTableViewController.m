@@ -7,9 +7,13 @@
 //
 
 #import "DiscoverTableViewController.h"
-
-@interface DiscoverTableViewController ()
-
+#import "ListingViewController.h"
+#import "FirstTableViewCell.h"
+#define Width [[UIScreen mainScreen] bounds].size.width
+@interface DiscoverTableViewController ()<UIScrollViewDelegate>
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) UIPageControl *pageControl;
+@property (nonatomic,strong)NSTimer * timer;
 @end
 
 @implementation DiscoverTableViewController
@@ -24,7 +28,97 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self initWithImageAndPageControl];
+
 }
+
+- (void)initWithImageAndPageControl
+{
+    self.scrollView.contentSize = CGSizeMake(Width*10, 0);
+    for (int i = 0; i < 10; i++) {
+        UIImageView * picImage = [[UIImageView alloc] initWithFrame:CGRectMake(Width*i, 0, Width, 200)];
+        picImage.tag = 100+i;
+        picImage.backgroundColor = [UIColor redColor];
+        [self.scrollView addSubview:picImage];
+    }
+    self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(Width/2-50, 170, 100, 30)];
+    _pageControl.pageIndicatorTintColor = [UIColor blackColor];
+    self.pageControl.numberOfPages = 10;
+    
+    [self.tableView addSubview:self.pageControl];
+    
+    [self.tableView bringSubviewToFront:self.pageControl];
+    
+    [self.pageControl addTarget:self action:@selector(didClickPageChange:) forControlEvents:UIControlEventValueChanged];
+    [self addTimer];
+    [self.scrollView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didEnterListing:)]];
+    
+}
+//点击pageControl
+- (void)didClickPageChange:(UIPageControl *)pageControl
+{
+    NSLog(@"====");
+    
+}
+#pragma mark-----------定时器
+//添加定时器
+- (void)addTimer
+{
+    self.timer=[NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(nextImage) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+    
+}
+//换到图片的下一张
+- (void)nextImage
+{
+    int page=(int)self.pageControl.currentPage;
+    if (page==9) {
+        page=0;
+    }else
+    {
+        page++;
+    }
+    //滚动scrollview
+    CGFloat X=page *self.scrollView.frame.size.width;
+    self.scrollView.contentOffset=CGPointMake(X, 0);
+    
+}
+//移除定时器
+- (void)removieTimer
+{
+    [self.timer invalidate];
+}
+#pragma mark----------UIScrollViewDelegate
+//结束滑动
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (scrollView == _scrollView) {
+        int page = scrollView.contentOffset.x/Width;
+        _pageControl.currentPage = page;
+    }
+}
+//将要滑动
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    if (scrollView == _scrollView) {
+        [self removieTimer];
+    }
+}
+//结束滑动
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    if (scrollView == _scrollView) {
+        [self addTimer];
+    }
+}
+#pragma mark--------点击轮播图触发的事件
+- (void)didEnterListing:(UITapGestureRecognizer *)GR
+{
+    ListingViewController * listingVC = [[ListingViewController alloc] init];
+    [self.navigationController pushViewController:listingVC animated:YES];
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -36,24 +130,34 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return 10;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString * identifier = @"First";
+    BOOL nibResgistered = NO;
+    if (!nibResgistered) {
+        UINib * nib = [UINib nibWithNibName:NSStringFromClass([FirstTableViewCell class]) bundle:nil];
+        [tableView registerNib:nib forCellReuseIdentifier:identifier];
+        nibResgistered = YES;
+    }
+    FirstTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     
-    // Configure the cell...
     
     return cell;
 }
-*/
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 155;
+}
 
 /*
 // Override to support conditional editing of the table view.
