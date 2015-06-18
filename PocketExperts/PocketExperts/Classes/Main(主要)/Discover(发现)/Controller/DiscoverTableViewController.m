@@ -89,7 +89,7 @@
     
 }
 //移除定时器
-- (void)removieTimer
+- (void)remo    vieTimer
 {
     [self.timer invalidate];
 }

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import <QMapKit/QMapKit.h>
 
 @interface AppDelegate ()
 
@@ -33,6 +34,8 @@
 //    UINavigationController *TNC = [[UINavigationController alloc] initWithRootViewController:discoverTVC];
 //    
 //    TBC.viewControllers = @[NC,TNC];
+    
+    [QMapServices sharedServices].apiKey = @"ORWBZ-6L43O-PG6W5-STY6F-QFF63-AEFD6";
     
     ViewController *VC = [[ViewController alloc] init];
     

@@ -7,9 +7,9 @@
 //
 
 #import "ExpertViewController.h"
-
-@interface ExpertViewController ()
-
+#import <QMapKit/QMapKit.h>
+@interface ExpertViewController ()<QMapViewDelegate>
+@property (nonatomic, strong) QMapView *mapView;
 @end
 
 @implementation ExpertViewController
@@ -18,6 +18,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"专家";
+    
+    self.mapView = [[QMapView alloc] initWithFrame:self.view.bounds];
+    self.mapView.delegate = self;
+    [self.view addSubview:self.mapView];
+    
 }
 
 - (void)didReceiveMemoryWarning {
