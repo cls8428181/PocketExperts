@@ -15,6 +15,7 @@
 		C736C4C01B32AB0F0064B2E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C736C4BD1B32AB0F0064B2E4 /* main.m */; };
 		C736C4D91B32B3A00064B2E4 /* KDBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C736C4D81B32B3A00064B2E4 /* KDBaseNavigationController.m */; };
 		C736C4DC1B32B4570064B2E4 /* KDConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C736C4DB1B32B4570064B2E4 /* KDConst.m */; };
+		C736C4DF1B32D1220064B2E4 /* PPRevealSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C736C4DE1B32D1220064B2E4 /* PPRevealSideViewController.m */; };
 		E50C9F9555BF4658E7786D9C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 430D6A2EBD4669140D9A06B2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,8 @@
 		C736C4D81B32B3A00064B2E4 /* KDBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDBaseNavigationController.m; sourceTree = "<group>"; };
 		C736C4DA1B32B4570064B2E4 /* KDConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDConst.h; sourceTree = "<group>"; };
 		C736C4DB1B32B4570064B2E4 /* KDConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDConst.m; sourceTree = "<group>"; };
+		C736C4DD1B32D1220064B2E4 /* PPRevealSideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPRevealSideViewController.h; sourceTree = "<group>"; };
+		C736C4DE1B32D1220064B2E4 /* PPRevealSideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPRevealSideViewController.m; sourceTree = "<group>"; };
 		D8199EC8BAC73BCAACB88F53 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +115,7 @@
 				B1F87A53FD88B24168747779 /* Frameworks */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		C736C46D1B3298690064B2E4 /* Products */ = {
 			isa = PBXGroup;
@@ -238,6 +242,8 @@
 		C736C4BE1B32AB0F0064B2E4 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				C736C4DD1B32D1220064B2E4 /* PPRevealSideViewController.h */,
+				C736C4DE1B32D1220064B2E4 /* PPRevealSideViewController.m */,
 			);
 			path = ThirdParty;
 			sourceTree = "<group>";
@@ -535,6 +541,7 @@
 				C736C4C01B32AB0F0064B2E4 /* main.m in Sources */,
 				C736C4DC1B32B4570064B2E4 /* KDConst.m in Sources */,
 				C736C4BF1B32AB0F0064B2E4 /* AppDelegate.m in Sources */,
+				C736C4DF1B32D1220064B2E4 /* PPRevealSideViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,7 +624,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -655,7 +662,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -674,6 +681,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fullteck.www.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Debug;
@@ -689,6 +697,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fullteck.www.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Release;

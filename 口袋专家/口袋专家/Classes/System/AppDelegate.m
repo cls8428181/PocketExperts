@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "AFNetworking.h"
 #import "KDBaseNavigationController.h"
+#import "PPRevealSideViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,6 +19,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    //    [QMapServices sharedServices].apiKey = @"";
+    
+//    MainViewController *mainViewController = [[MainViewController alloc] init];
+    KDBaseNavigationController *navigationController = [[KDBaseNavigationController alloc] init];
+    
+    self.window.rootViewController = [[PPRevealSideViewController alloc] initWithRootViewController:navigationController];
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    [self.window makeKeyAndVisible];
     
     return YES;
 }
